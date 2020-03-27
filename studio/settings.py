@@ -13,7 +13,7 @@ SECRET_KEY = 'me%7y1c!7&%jwgrn0_gqsyesv*h%=np4^g_pd*%m*1$-bjwo)j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://studio-landing.herokuapp.com/"]
 
 
 # Application definition
@@ -110,6 +110,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
