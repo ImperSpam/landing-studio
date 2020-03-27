@@ -2,6 +2,7 @@ from django.shortcuts import render
 from landing.forms import CallbackForm
 from .models import Request
 
+
 def index(request):
     if request.POST:
         form = CallbackForm(request.POST)
