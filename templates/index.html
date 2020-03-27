@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'slick/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="container">
+        <div class="header-logo"><img src="{% static 'img/logo.png' %}" alt="" srcset=""></div>
+        <div class="header-contact">
+            <div class="header-contact-phone">+7 (347) 258-84-07</div>
+            <div class="header-contact-worktime">Ежедневно с 9:00 до 22:00</div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="offer">
+            <div class="offer-main-text">Разрабатываем
+                одностраничные сайты
+                с высокой конверсией
+                всего от 6 000 руб.</div>
+            <div class="offer-sub-text">Которые приносят владельцам заявки, деньги и уважение</div>
+            <button class="btn" id="callback-button">Заказать консультацию</button>
+            <div class="offer-slider-wrapper">
+                <div class="offer-slider-nav">
+                    <div class="offer-slider-nav-text">Посмотрите лучшие
+                        работы нашей студии</div>
+                    <div class="offer-slider-nav-index">
+                        <span class="offer-slider-nav-index-current">1</span> <span>ИЗ</span> <span class="offer-slider-nav-index-total">16</span>
+                    </div>
+                </div>
+                <div class="offer-slider">
+                    <div>
+                        <div class="offer-slider-item">
+                            <img src="{% static 'img/portfolio/1.png' %}" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="offer-slider-item">
+                            <img src="{% static 'img/portfolio/1.png' %}" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mac">
+            <img src="{% static 'img/Macbook.png' %}" alt="" class="mac-img">
+            <img src="{% static 'img/mac-content.png' %}" alt="" class="mac-content">
+        </div>
+    </section>
+
+    <div class="modal" id="callback-form">
+        <form action="/" class="callback-form" method="post">
+            {% csrf_token %}
+            <div class="form-title">Заполните форму и мы Вам
+                перезвоним для консультации</div>
+            <div class="form-line"></div>
+            <input type="text" class="input-name" placeholder="Введите ваше имя" name="name" id="id_name">
+            <div class="form-contact-choose">
+                <div class="form-contact-choose-telegram active" id="telegram_choise"><img src="{% static 'img/telegram.png' %}" alt="" srcset="">Telegram</div>
+                <div class="form-contact-choose-mail" id="mail_choise"><img src="{% static 'img/mail.png' %}" alt="" srcset="">Mail</div>
+            </div>
+            <input type="text" class="input-telegram input-contact" placeholder="Введите ваш Telegram" name="telegram" id="id_telegram">
+            <button class="btn" type="submit">
+                Заказать консультацию
+            </button>
+            <div class="form-contact-accept">
+                <div class="form-contact-accept-checkbox"><img src="{% static 'img/tick.png' %}" alt=""></div>
+                <div class="form-contact-accept-text">
+                    Даю согласие на обработку  моих персональных данных
+                </div>
+            </div>
+        <img src="{% static 'img/close.png' %}" class="form-close" id="modal-form-close"></img>
+        </form>pip
+    </div>
+
+    <footer class="container">
+        © 2019 Logotype. Все права защищены
+    </footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</body>
