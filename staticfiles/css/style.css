@@ -1,0 +1,738 @@
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansCyrl-100.ttf") format("truetype");
+    font-weight: 100;
+   }
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansCyrl-300.ttf") format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansCyrl-500.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: url("../fonts/MuseoSansCyrl-900.ttf") format("truetype");
+    font-weight: 900;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: "MuseoSans";
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    max-width: 1110px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+	outline: none;
+	border: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-logo{
+    margin-top: 32px;
+}
+
+.header-contact{
+    margin-top: 24px;
+}
+
+.header-contact-phone{
+    font-size: 27px;
+    font-weight: 900;
+    color: #332f2e;
+}
+
+.header-contact-worktime{
+    color: #979797;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+section{
+    display: flex;
+    width: 100%;
+}
+
+.offer{
+    width: 65%;
+}
+
+.offer-main-text{
+    font-weight: 900;
+    font-size: 45px;
+    color: #332f2e;
+    margin-top: 64px;
+    margin-right: 160px;
+}
+
+.offer-sub-text{
+    color: #626060;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.offer button{
+    margin-bottom: 50px;
+    margin-top: 47px;
+}
+
+.btn{
+    font-weight: 700;
+    font-size: 18px;
+    color: #55483c;
+    text-shadow: 0 2px 0 #ffd800;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( 90deg, rgb(251,181,0) 0%, rgb(255,216,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(251,181,0) 0%, rgb(255,216,0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(251,181,0) 0%, rgb(255,216,0) 100%);
+    box-shadow: 0px 6px 0px 0px rgba(222, 168, 13), 0px 18px 51px 0px rgba(246, 183, 0, 0.5);
+    padding-top: 37px;
+    padding-bottom: 32px;
+    padding-left: 65px;
+    padding-right: 60px;
+    letter-spacing: 0.015em;
+    cursor: pointer;
+    width: max-content;
+}
+
+.mac{
+    width: 35%;
+    position: relative;
+}
+
+.mac-img{
+    position: absolute;
+    top: 47px;
+    left: -180px;
+    z-index: 5;
+}
+
+.mac-content{
+    position: absolute;
+    top: 85px;
+    left: -10px;
+}
+
+.offer-slider-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.offer-slider{
+    width: 73%;
+    margin-top: 24px;
+}
+
+.offer-slider-nav{
+    width: 27%;
+    position: relative;
+}
+
+.offer-slider-nav-text{
+    font-weight: 300;
+    color: #313131;
+    font-size: 19px;
+    margin-top: 55px;
+}
+
+.offer-slider-nav-index{
+    color: #3a3a3a;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 44px;
+}
+
+.offer-slider-item{
+    border: 3px solid #49a9f3;
+    width: max-content;
+    border-radius: 3px;
+    box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.slick-slide{
+    outline: none;
+    margin-right: 10px;
+    width: max-content;
+}
+
+.slick-list{
+    padding:0 20% 0 0;
+    margin-left: 50px;
+}
+
+.slick-arrow{
+    cursor: pointer;
+    position: absolute;
+    bottom: 28px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to top, #fbb500 0%, #ffd800 100%);
+    background-image: -ms-linear-gradient( to top, #fbb500 0%, #ffd800 100%);
+    box-shadow: 0 3px 0 0 #dea80d, 0 18px 51px 0 rgba(246, 183, 0, 0.5);
+}
+
+.slick-prev{
+    left: 0;
+}
+
+.slick-next{
+    right: 0;
+}
+
+.slick-disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.callback-form{
+    max-width: 510px;
+    max-height: 590px;
+    height: 65%;
+    width: 40%;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 52px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-title{
+    font-weight: 900;
+    font-size: 30px;
+    color: #332f2e;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-line{
+    background-color: #49a9f3;
+    height: 3px;
+    width: 150px;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.callback-form input{
+    border: none;
+    outline: none;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    box-shadow: inset -4.316px 4.168px 7px 0px rgba(24, 19, 13, 0.02);
+    font-size: 16px;
+    font-weight: 100;
+    color: #686868;
+    padding-left: 65px;
+    padding-right: 15px;
+    height: 70px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input-name {
+    margin-top: 23px;
+    background: url(../img/user.png) no-repeat 25px 50%;
+}
+
+.input-telegram{
+    background: url(../img/telegram.png) no-repeat 25px 50%;
+}
+
+.input-mail{
+    background: url(../img/mail.png) no-repeat 25px 50%;
+}
+
+.input-contact{
+    margin-top: 17px;
+}
+
+.form-contact-choose{
+    display: flex;
+    max-width: 414px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+    margin-top: 14px;
+}
+
+.form-contact-choose div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 100;
+    font-size: 16px;
+    color: #686868;
+    height: 80px;
+    transition: 0.75s;
+    cursor: pointer;
+}
+
+.form-contact-choose img{
+    margin-bottom: 7px;
+}
+
+.form-contact-choose div:hover, .form-contact-choose .active{
+    background-color: #f3f3f3;
+}
+
+.callback-form button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 5px;
+    width: 81%;
+    height: 15%;
+}
+
+.form-contact-accept{
+    display: flex;
+    margin-top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.form-contact-accept-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: #fdc800;
+}
+
+.form-contact-accept-checkbox img{
+
+}
+
+.form-contact-accept-text{
+    color: #6c6868;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    width: 93%;
+}
+
+.callback-form::before{
+    border-radius: 10px;
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    bottom: -5px;
+    margin-left: 5%;
+    z-index: -5;
+}
+
+.form-close{
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    cursor: pointer;
+}
+
+footer{
+    font-weight: 100;
+    font-size: 14px;
+    color: #696969;
+    letter-spacing: 0.025em;
+    margin-top: 88px;
+}
+
+@media (max-width: 1149px){
+    .container{
+        width: 950px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .offer-main-text{
+        margin-right: 70px;
+    }
+
+    .slick-arrow{
+        bottom: 35px;
+    }
+
+    .offer-slider-nav{
+        width: 35%;
+    }
+    .offer-slider{
+        width: 65%;
+    }
+
+    .offer-slider-nav-index{
+        margin-top: 33px;
+    }
+
+    .slick-list{
+        margin-left: 35px;
+    }
+}
+
+@media(max-width: 979px){
+    .container{
+        width: 790px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .offer-slider-nav{
+        width: 27.5%;
+    }
+    .offer-slider{
+        width: 72.5%;
+    }
+
+    .offer-main-text{
+        margin-right: 0;
+        font-size: 41px;
+    }
+
+    .offer-sub-text{
+        font-size: 17px;
+    }
+
+    .offer-slider-nav-text{
+        font-size: 13px;
+        margin-top: 65px;
+    }
+
+    .offer-slider-nav-index{
+        margin-top: 25px;
+        font-size: 13px;
+    }
+
+    .slick-arrow{
+        bottom: 55px;
+        height: 35px;
+        width: 35px;
+    }
+
+
+    .slick-list{
+        margin-left: 15px;
+    }
+
+    .mac-img{
+        left: -130px;
+    }
+
+    .mac-content{
+        left: 20px;
+    }
+}
+
+@media(max-width: 809px){
+    .container {
+        width: 650px;
+    }
+
+    .offer-main-text{
+        font-size: 34px;
+    }
+
+    .offer-sub-text{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    .offer button{
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .offer-slider-nav{
+        width: 35%;
+    }
+    .offer-slider{
+        width: 65%;
+    }
+
+    .mac-img{
+        width: 1100px;
+        left: -110px;
+    }
+
+    .mac-content{
+        width: 805px;
+        left: 40px;
+    }
+
+    .offer-slider-item img{
+        width: 250px;
+    }
+
+    .slick-arrow{
+        bottom: 25px;
+    }
+
+    .callback-form{
+        width: 80%;
+        height: 80%;
+        margin: 0;
+    }
+
+    .callback-form input{
+        width: 55%;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    .callback-form::before{
+        width: 90%;
+    }
+    .callback-form .btn{
+        padding-right: 37px;
+        padding-left: 37px;
+    }
+}
+
+@media (max-width: 669px){
+    .container{
+        width: 440px;
+    }
+
+    .header-logo img{
+        width: 150px;
+    }
+
+    .header-contact-phone{
+        font-size: 20px;
+    }
+
+    .header-contact-worktime{
+        font-size: 12px;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    .offer{
+        width: 100%;
+    }
+
+    .offer-main-text{
+        margin-top: 25px;
+    }
+
+    .mac{
+        width: 100%;
+        height: 300px;
+    }
+
+    .mac-img{
+        width: 675px;
+        top: -10px;
+        left: -65px;   
+    }
+
+    .mac-content{
+        width: 500px;
+        top: 10px;
+        left: 30px;
+    }
+
+    .offer-slider-item img{
+        width: 265px;
+    }
+
+    .offer button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slick-arrow{
+        bottom: 32px;
+    }
+
+    .form-title{
+        font-size: 22px;
+    }
+    form .btn{
+        font-size: 14px;
+    }
+
+    .form-contact-accept-text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 459px){
+    .container{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-logo{
+        margin-top: 15px;
+    }
+
+    .header-contact{
+        margin-top: 10px;
+    }
+
+    .header-logo img{
+        width: 100px;
+    }
+
+    .header-contact-phone{
+        font-size: 14px;
+    }
+
+    .header-contact-worktime{
+        font-size: 10px;
+    }
+
+    .offer-main-text{
+        margin-top: 15px;
+        font-size: 26px;
+    }
+
+    .offer-sub-text{
+        font-size: 12px;
+    }
+
+    .offer .btn{
+        padding: 5px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        font-size: 14px;
+    }
+
+    .offer-slider-wrapper{
+        flex-direction: column;
+    }
+
+    .offer-slider-nav{
+        width: 100%;
+    }
+
+    .offer-slider-nav-text{
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .offer-slider{
+        width: 100%;
+        align-items: center;
+    }
+
+    .slick-arrow{
+        bottom: -5px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .slick-next{
+        right: 10%;
+    }
+
+    .slick-prev{
+        left: 10%;
+    }
+
+    .offer-slider-nav-index{
+        margin-top: 10px;
+    }
+
+    .offer button{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-height: 750px){
+    .form-title{
+        font-size: 22px;
+    }
+
+    .callback-form button{
+        font-size: 14px;
+    }
+
+    .form-contact-choose div{
+        height: 60px;
+    }
+}
+
+@media (max-height: 750px){
+    .form-title{
+        font-size: 20px;
+    }
+
+    .callback-form button{
+        font-size: 14px;
+    }
+    
+    .form-contact-accept-text{
+        font-size: 10px;
+    }
+
+    .form-contact-choose div{
+        height: 60px;
+    }
+}
