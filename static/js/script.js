@@ -37,21 +37,39 @@ $(document).on('ready', function(){
 $(document).on('ready', function(){
 	var telegram_choise = document.getElementById('telegram_choise');
 	var mail_choise = document.getElementById('mail_choise');
-	var input_contact = document.getElementById('input-contact');
+	var vk_choise = document.getElementById('vk_choise');
+	var input_contact = document.getElementsByClassName('input-contact')[0];
 	telegram_choise.onclick = function(){
 		telegram_choise.classList.add("active");
 		mail_choise.classList.remove("active");
+		vk_choise.classList.remove("active");
 		input_contact.setAttribute("name", "telegram");
+		input_contact.setAttribute("id", "id_telegram");
 		input_contact.setAttribute("placeholder", "Введите ваш Telegram");
 		input_contact.classList.remove("input-mail");
-		input_contact.classList.add("input-telegram")
-	}
+		input_contact.classList.add("input-telegram");
+		input_contact.classList.remove("input-vk")
+	};
 	mail_choise.onclick = function(){
 		telegram_choise.classList.remove("active");
 		mail_choise.classList.add("active");
+		vk_choise.classList.remove("active");
 		input_contact.setAttribute("name", "mail");
+		input_contact.setAttribute("id", "id_mail");
 		input_contact.setAttribute("placeholder", "Введите ваш Mail");
 		input_contact.classList.add("input-mail");
-		input_contact.classList.remove("input-telegram")
-	}
+		input_contact.classList.remove("input-telegram");
+		input_contact.classList.remove("input-vk")
+	};
+	vk_choise.onclick = function(){
+		vk_choise.classList.add("active");
+		telegram_choise.classList.remove("active");
+		mail_choise.classList.remove("active");
+		input_contact.setAttribute("name", "vk");
+		input_contact.setAttribute("id", "id_vk");
+		input_contact.setAttribute("placeholder", "Введите ваш VK");
+		input_contact.classList.remove("input-mail");
+		input_contact.classList.remove("input-telegram");
+		input_contact.classList.add("input-vk");
+	};
 });

@@ -296,6 +296,10 @@ section{
     background: url(../img/mail.png) no-repeat 25px 50%;
 }
 
+.input-vk{
+    background: url(../img/vk.png) no-repeat 25px 50%;
+}
+
 .input-contact{
     margin-top: 17px;
 }
@@ -311,7 +315,7 @@ section{
 }
 
 .form-contact-choose div{
-    width: 50%;
+    width: 33.3333%;
     display: flex;
     justify-content: center;
     align-items: center;
